@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styles from './QuizForm.module.css';
 import { Link } from 'react-router-dom';
-import h from 'home-on-the-range';
-
 import QuestionForm from './QuestionForm/QuestionForm';
 import * as jsPDF from 'jspdf';
 
@@ -12,7 +10,8 @@ import {
     FormGroup,
     Label,
     Input,
-    FormText
+    FormText,
+    Alert
 } from 'reactstrap';
 
 class QuizForm extends Component {
@@ -32,7 +31,8 @@ class QuizForm extends Component {
             true: '',
             false: '',
             quizName: '',
-            studentCount: ''
+            studentCount: '',
+            visible: false
         }
 
         this.typeHandler = this.typeHandler.bind(this);
@@ -42,6 +42,18 @@ class QuizForm extends Component {
         this.hideQuizName = this.hideQuizName.bind(this);
         this.lastStepHandler = this.lastStepHandler.bind(this);
         this.shuffleQuizHandler = this.shuffleQuizHandler.bind(this);
+        this.toggle = this.toggle.bind(this);
+    }
+
+    toggle() {
+        this.setState({
+            visible: !this.state.visible
+        })
+        setTimeout(() => {
+            this.setState({
+                visible: !this.state.visible
+            });
+        }, 1000);
     }
 
     componentDidMount() {
@@ -117,6 +129,7 @@ class QuizForm extends Component {
             })
             this.clearform();
         }
+        this.toggle();
     }
     
 
@@ -187,8 +200,7 @@ class QuizForm extends Component {
             <h5 style="font-size:16px">Name:</h5>
             <h5 style="font-size:16px">Date:</h5>
             <h2 style="font-size:25px">${quizName}</h2>
-            <br><br>
-    `;
+            <br><br>`;
             let quizLength = questionArray.length;
             for (let i = 0; i < quizLength; i++) {
                 let questionNumber = i + 1;
@@ -245,7 +257,7 @@ class QuizForm extends Component {
                     </Input>
                 </div>
                 <button id="quizNameButton" onClick={this.hideQuizName} className={styles.btn + ' mt-3 mb-0'}> Next Step <span style={{fontSize: "20"}}>➜</span></button>
-
+                <Alert color="primary" isOpen={this.state.visible} toggle={this.toggle}>Question Added!</Alert>
                 <div id="formLabel" className={styles.questionTypeCard + ' ' + styles.formDisplay}>
                 <Label for="question-type"> Choose a Question Type</Label>
                 <Input onChange={this.typeHandler} id="question-type" type="select" bsSize="sm">
