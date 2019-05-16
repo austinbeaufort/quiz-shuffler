@@ -36,7 +36,9 @@ class AppNavbar extends Component {
             <div>
                 <Navbar color="dark" dark expand="sm" className="mb-5">
                     <Container>
-                        <NavbarBrand href="/"><img src={logo} width="250px" alt="Quiz Randomizer"/></NavbarBrand>
+                        <Link to="/">
+                            <NavbarBrand><img src={logo} width="250px" alt="Quiz Randomizer"/></NavbarBrand>
+                        </Link>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
