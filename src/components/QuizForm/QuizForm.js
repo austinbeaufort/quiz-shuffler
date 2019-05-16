@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import styles from './QuizForm.module.css';
 import { Link } from 'react-router-dom';
 import QuestionForm from './QuestionForm/QuestionForm';
+import darkLogo from '../../img/darkLogo.png';
+import homepic from '../../img/homepic.png';
 import * as jsPDF from 'jspdf';
 
 import {
-    Button,
     Form,
-    FormGroup,
     Label,
     Input,
-    FormText,
     Alert
 } from 'reactstrap';
 
@@ -31,7 +30,7 @@ class QuizForm extends Component {
             true: '',
             false: '',
             quizName: '',
-            studentCount: '',
+            studentCount: 1,
             visible: false
         }
 
@@ -276,13 +275,13 @@ class QuizForm extends Component {
                         <div className={styles.endCard}>
                             <h4>Create Quiz "as is"</h4>
                             <Link to="/contact">
-                                <button type="button" onClick={this.pdfHandler} className={styles.btn + ' mt-3'}>Finished? Download PDF</button>
+                                <button type="button" onClick={this.pdfHandler} className={styles.btn + ' mt-3'}><img className={styles.pdfLogo} src={homepic} alt="quiz"/> Download PDF</button>
                             </Link>
                         </div>
                         <div className={styles.endCard2}>
                             <h4>Shuffle my quiz questions!</h4>
                             <Link to="/contact">
-                                <button type="button" onClick={this.shuffleQuizHandler} className={styles.btn + ' mt-3'}>Finished? Download PDF</button>
+                                <button type="button" onClick={this.shuffleQuizHandler} className={styles.btn + ' mt-3'}><img className={styles.pdfLogo} src={darkLogo} alt="quiz"/> Download PDF</button>
                             </Link>
                         </div>
                     

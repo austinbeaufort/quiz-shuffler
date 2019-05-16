@@ -1,18 +1,12 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "quiz-randomizer",
+  "version": "1.0.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
+  "description": "Create a quiz and select a number of students. This site will automatically generate a pdf of the number of quizzes desire, with each quiz guaranteed to be randomized to encourage authentic learning",
   "dependencies": {
-    "@react-pdf/renderer": "^1.5.6",
-    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
-    "file-saver": "^2.0.1",
-    "home-on-the-range": "^1.1.4",
     "jspdf": "^1.5.3",
     "react": "^16.8.6",
-    "react-alert": "^5.5.0",
-    "react-alert-template-basic": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-pdf": "^4.0.5",
     "react-popper": "^1.3.3",
@@ -30,6 +24,18 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "keywords": [
+    "mern",
+    "fullstack",
+    "javascript",
+    "test",
+    "quiz",
+    "school",
+    "education",
+    "learning"
+  ],
+  "author": "Austin Beaufort",
+  "license": "ISC",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -41,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-social-icons": "^4.1.0"
   }
 }

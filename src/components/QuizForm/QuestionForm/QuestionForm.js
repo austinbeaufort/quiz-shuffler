@@ -9,7 +9,6 @@ const QuestionForm = props => {
     if (props.type === 'mc') {
         return(
             <div className={styles.card}>
-                <h4 onClick={props.click} className={styles.deleteIcon + " text-left pt-2"}>X</h4>
                 <Label for="mcQuestion">Question</Label>
                 <Input 
                     type="text" 
@@ -39,7 +38,6 @@ const QuestionForm = props => {
     } else if (props.type === 'tf') {
         return (
             <div className={styles.card}>
-                <h4 onClick={props.click} className={styles.deleteIcon + " text-left pt-2"}>X</h4>
                 <Label for="tfQuestion">Question (T/F)</Label>
                 <Input 
                     type="text" 
@@ -60,7 +58,6 @@ const QuestionForm = props => {
     } else {
         return (
             <div className={styles.card}>
-                <h4 onClick={props.click} className={styles.deleteIcon + " text-left pt-2"}>X</h4>
                 <Label for="saQuestion">Question</Label>
                 <Input 
                     type="text" 

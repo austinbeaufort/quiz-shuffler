@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../../img/logo.png';
 import styles from './Navbar.module.css';
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import {
     Collapse,
@@ -46,8 +46,8 @@ class AppNavbar extends Component {
                                     </Link>
                                 </NavItem>
                                 <NavItem>
-                                    <Link className={styles.link + " pl-4 pr-4 pt-1 pb-1"} to="/login">
-                                        Login
+                                    <Link className={styles.link + " pl-4 pr-4 pt-1 pb-1"} to="/about">
+                                        About
                                     </Link>
                                 </NavItem>
                                 <NavItem>

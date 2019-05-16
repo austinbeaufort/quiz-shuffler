@@ -1,0 +1,32 @@
+.icon {
+    margin: 30px 10px 0 10px;
+}
+
+.iconContainer {
+    border: 3px solid var(--primary-color);
+    padding: 10px 30px 30px 30px;
+    box-shadow: 3px 3px 3px var(--secondary-color);
+    background-color: rgb(255, 253, 245);
+    width: 97%;
+    margin: auto;
+  }
+
+h1 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 375px) {
+    .iconContainer {
+        width: 95%;
+    }
+}
+
+@media (min-width: 400px) {
+    .iconContainer {
+        width: 90%;
+    }
+}
