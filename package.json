@@ -2,9 +2,11 @@
   "name": "quiz-randomizer",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://austinbeaufort.github.io/quiz-shuffler/",
   "description": "Create a quiz and select a number of students. This site will automatically generate a pdf of the number of quizzes desire, with each quiz guaranteed to be randomized to encourage authentic learning",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
     "jspdf": "^1.5.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -19,6 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
