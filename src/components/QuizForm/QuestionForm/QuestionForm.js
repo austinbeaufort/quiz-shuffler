@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './QuestionForm.module.css';
+import '../../../App.css';
 import {
     Label,
     Input

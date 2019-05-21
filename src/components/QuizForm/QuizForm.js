@@ -255,7 +255,12 @@ class QuizForm extends Component {
                     <Input onChange={this.changeHandler} id="studentCount" type="text">
                     </Input>
                 </div>
-                <button id="quizNameButton" onClick={this.hideQuizName} className={styles.btn + ' mt-3 mb-0'}> Next Step <span style={{fontSize: "20"}}>➜</span></button>
+                <button 
+                    id="quizNameButton" 
+                    onClick={this.hideQuizName} 
+                    className={styles.btn + ' mt-3 mb-0'}
+                    > Next Step <span style={{fontSize: "20"}}>➜</span>
+                </button>
                 <Alert color="primary" isOpen={this.state.visible} toggle={this.toggle}>Question Added!</Alert>
                 <div id="formLabel" className={styles.questionTypeCard + ' ' + styles.formDisplay}>
                 <Label for="question-type"> Choose a Question Type</Label>
@@ -268,20 +273,39 @@ class QuizForm extends Component {
                 <Form className={styles.formDisplay} id="form" onSubmit={this.submitHandler} >  
                     <div>
                         <QuestionForm addQuestion={this.addNewQuestion} change={this.changeHandler} type={this.state.questionType}/>
-                        <button type="button" onClick={this.lastStepHandler} className={styles.btn + ' mt-3'}>Done adding Questions?<br></br><br></br> Last step <span style={{fontSize: "20"}}>➜</span></button>
+                        <button 
+                            type="button" 
+                            onClick={this.lastStepHandler} 
+                            className={styles.btn + ' mt-3'}
+                            >Done adding Questions?
+                            <br></br><br></br> 
+                            Last step <span style={{fontSize: "20"}}>➜</span>
+                        </button>
                     </div>
                 </Form>
                 <div id="styleDisplay" className={styles.formDisplay}>
                         <div className={styles.endCard}>
                             <h4>Create Quiz "as is"</h4>
                             <Link to="/contact">
-                                <button type="button" onClick={this.pdfHandler} className={styles.btn + ' mt-3'}><img className={styles.pdfLogo} src={homepic} alt="quiz"/> Download PDF</button>
+                                <button 
+                                    type="button" 
+                                    onClick={this.pdfHandler} 
+                                    className={styles.btn + ' mt-3'}>
+                                    <img className={styles.pdfLogo} src={homepic} alt="quiz"/> 
+                                    Download PDF
+                                </button>
                             </Link>
                         </div>
                         <div className={styles.endCard2}>
                             <h4>Shuffle my quiz questions!</h4>
                             <Link to="/contact">
-                                <button type="button" onClick={this.shuffleQuizHandler} className={styles.btn + ' mt-3'}><img className={styles.pdfLogo} src={darkLogo} alt="quiz"/> Download PDF</button>
+                                <button 
+                                    type="button" 
+                                    onClick={this.shuffleQuizHandler} 
+                                    className={styles.btn + ' mt-3'}>
+                                    <img className={styles.pdfLogo} src={darkLogo} alt="quiz"/> 
+                                    Download PDF
+                                </button>
                             </Link>
                         </div>
                     

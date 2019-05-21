@@ -10,14 +10,6 @@ import About from './components/About/About';
 import QuizForm from './components/QuizForm/QuizForm';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      loggedIn: false
-    }
-  }
-
 
   render() {
     return (
